@@ -373,7 +373,7 @@ p {
 /* ---------- PARALLAX ---------- */
 
 .parallax {
-    background-image: url("https://picsum.photos/1800/1200?random=2");
+    background-image: url(/assets/3.jpeg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
