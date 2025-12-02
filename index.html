@@ -1,315 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refugio Alma Lodge | Private Nature Retreats</title>
-    <meta name="description"
-        content="Experience the ultimate in private luxury and nature at Refugio Alma Lodge. Tailor-made excursions in South America's most breathtaking landscapes.">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lodge Patagonia – Naturaleza y Diseño</title>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
 
-    <!-- Navigation -->
-    <nav id="navbar" class="navbar">
-        <div class="nav-container">
-            <div class="nav-left">
-                <!-- Spacer or potential future content like 'Book Now' text link -->
-                <a href="#book" class="nav-book-link desktop-only">Book Your Stay</a>
-            </div>
-
-            <div class="nav-center">
-                <a href="#" class="logo">REFUGIO ALMA</a>
-            </div>
-
-            <div class="nav-right">
-                <button id="menu-toggle" class="menu-toggle" aria-label="Open Menu">
-                    <span class="menu-label desktop-only">MENU</span>
-                    <div class="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Full Screen Menu Overlay -->
-    <div id="menu-overlay" class="menu-overlay">
-        <button id="menu-close" class="menu-close" aria-label="Close Menu">&times;</button>
-        <div class="menu-content">
-            <ul class="menu-links">
-                <li><a href="#home" class="menu-link">Home</a></li>
-                <li><a href="#lodges" class="menu-link">The Lodges</a></li>
-                <li><a href="#experiences" class="menu-link">Experiences</a></li>
-                <li><a href="#about" class="menu-link">Our Philosophy</a></li>
-                <li><a href="#journal" class="menu-link">Journal</a></li>
-                <li><a href="#contact" class="menu-link">Contact</a></li>
-            </ul>
-            <div class="menu-footer">
-                <p>Refugio Alma Collection</p>
-                <div class="social-links">
-                    <a href="#">Instagram</a>
-                    <a href="#">Facebook</a>
-                </div>
-            </div>
+<nav class="awasi-nav" id="awasiNav">
+    <!-- Left: Burger Menu -->
+    <div class="nav-left">
+        <div class="nav-toggle" id="navToggle">
+            <span></span><span></span><span></span>
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <header id="home" class="hero">
-        <div class="hero-background" id="hero-bg"
-            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://placehold.co/1920x1080/333333/FFFFFF?text=Nature+Retreat');">
-        </div>
-        <div class="hero-content">
-            <h1 class="hero-title fade-in-up">Where Nature Meets <br><i>Quiet Luxury</i></h1>
-            <p class="hero-subtitle fade-in-up delay-1">Private Excursions. Tailor-Made Service. Unforgettable
-                Landscapes.</p>
-            <div class="hero-buttons fade-in-up delay-2">
-                <a href="#lodges" class="btn btn-primary">Discover the Lodges</a>
-                <a href="#experiences" class="btn btn-outline">Watch Experiences</a>
+    <!-- Center: Logo -->
+    <div class="nav-logo">
+        <a href="#hero" class="logo-link">
+            <span class="logo-refugio">REFUGIO</span>
+            <span class="logo-alma">ALMA</span>
+            <span class="logo-lodge">| LODGE</span>
+        </a>
+    </div>
+
+    <!-- Right: Placeholder/Empty for balance -->
+    <div class="nav-right">
+        <!-- Optional: Book button or empty to keep logo centered -->
+    </div>
+</nav>
+
+<!-- Menu móvil overlay -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="#experiencias">Experiencias</a>
+    <a href="#lodge">Lodge</a>
+    <a href="#suites">Suites</a>
+    <a href="#galeria">Galería</a>
+    <a href="#reserva">Reserva</a>
+    <a href="#contacto">Contacto</a>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Refugio en la Naturaleza</h1>
+        <p>Un lodge boutique rodeado de bosques, montañas y silencio.</p>
+        <a href="#reserva" class="btn-hero">Planificar estadía</a>
+    </div>
+</header>
+
+<!-- EXPERIENCIAS -->
+<section id="experiencias">
+    <h2>Experiencias</h2>
+    <p>
+        Texto de ejemplo: Vivencias únicas en un entorno natural incomparable. Diseñadas 
+        para quienes buscan desconexión, aventura y confort en cada detalle.
+    </p>
+
+    <div class="grid">
+        <article class="exp-card">
+            <img src="https://picsum.photos/800/600?random=3" alt="Experiencia 1">
+            <div class="exp-text">
+                <h3>Exploraciones privadas</h3>
+                <p>Recorridos guiados en grupos pequeños, a tu ritmo y según tus intereses.</p>
+            </div>
+        </article>
+        <article class="exp-card">
+            <img src="https://picsum.photos/800/600?random=4" alt="Experiencia 2">
+            <div class="exp-text">
+                <h3>Gastronomía local</h3>
+                <p>Cocina de autor inspirada en ingredientes de temporada y productores cercanos.</p>
+            </div>
+        </article>
+        <article class="exp-card">
+            <img src="https://picsum.photos/800/600?random=5" alt="Experiencia 3">
+            <div class="exp-text">
+                <h3>Silencio & descanso</h3>
+                <p>Espacios pensados para desconectar del ruido digital y reconectar contigo.</p>
+            </div>
+        </article>
+    </div>
+</section>
+
+<div class="parallax"></div>
+
+<!-- LODGE -->
+<section id="lodge">
+    <h2>El Lodge</h2>
+    <p>
+        Texto genérico: Nuestro lodge combina arquitectura orgánica, materiales nobles 
+        y una atmósfera acogedora para una estadía memorable.
+    </p>
+
+    <div class="cards">
+        <div class="card">
+            <img src="https://picsum.photos/800/600?random=6" alt="Diseño">
+            <div class="card-content">
+                <h3>Diseño</h3>
+                <p>Ambientes inspirados en la naturaleza, con texturas cálidas y luz suave.</p>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <div class="line"></div>
-        </div>
-    </header>
-
-    <!-- Lodges Section -->
-    <section id="lodges" class="section lodges-section">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="overline">Destinations</span>
-                <h2 class="section-title">Our Private Lodges</h2>
-            </div>
-
-            <div class="lodges-grid">
-                <!-- Lodge 1 -->
-                <article class="lodge-card scroll-reveal">
-                    <div class="lodge-image-wrapper">
-                        <div class="lodge-image"
-                            style="background-image: url('https://placehold.co/800x600/C19A6B/FFFFFF?text=Atacama+Desert');">
-                        </div>
-                    </div>
-                    <div class="lodge-info">
-                        <span class="location">Atacama, Chile</span>
-                        <h3 class="lodge-name">Desert Sanctuary</h3>
-                        <p class="lodge-desc">A secluded oasis amidst the driest desert in the world. Stargazing and
-                            silence.</p>
-                        <a href="#" class="btn-text">Explore Lodge</a>
-                    </div>
-                </article>
-
-                <!-- Lodge 2 -->
-                <article class="lodge-card scroll-reveal delay-1">
-                    <div class="lodge-image-wrapper">
-                        <div class="lodge-image"
-                            style="background-image: url('https://placehold.co/800x600/556B2F/FFFFFF?text=Patagonia+Mountains');">
-                        </div>
-                    </div>
-                    <div class="lodge-info">
-                        <span class="location">Patagonia, Chile</span>
-                        <h3 class="lodge-name">Mountain Retreat</h3>
-                        <p class="lodge-desc">Private villas overlooking the majestic Torres del Paine. Adventure
-                            awaits.</p>
-                        <a href="#" class="btn-text">Explore Lodge</a>
-                    </div>
-                </article>
-
-                <!-- Lodge 3 -->
-                <article class="lodge-card scroll-reveal delay-2">
-                    <div class="lodge-image-wrapper">
-                        <div class="lodge-image"
-                            style="background-image: url('https://placehold.co/800x600/2F4F4F/FFFFFF?text=Rainforest+Hideaway');">
-                        </div>
-                    </div>
-                    <div class="lodge-info">
-                        <span class="location">Iguazu, Argentina</span>
-                        <h3 class="lodge-name">Rainforest Hideaway</h3>
-                        <p class="lodge-desc">Immerse yourself in the Atlantic Rainforest. Wildlife and waterfalls.</p>
-                        <a href="#" class="btn-text">Explore Lodge</a>
-                    </div>
-                </article>
+        <div class="card">
+            <img src="https://picsum.photos/800/600?random=7" alt="Comodidad">
+            <div class="card-content">
+                <h3>Comodidad</h3>
+                <p>Detalles pensados para el descanso profundo y bienestar total.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Experiences Section -->
-    <section id="experiences" class="section experiences-section bg-light">
-        <div class="container">
-            <div class="experiences-layout">
-                <div class="exp-text scroll-reveal">
-                    <span class="overline">Tailor-Made</span>
-                    <h2 class="section-title">Curated Experiences</h2>
-                    <p class="section-desc">Every day is a new adventure designed just for you. From private guides to
-                        gourmet picnics in the wild.</p>
-                    <a href="#" class="btn btn-dark">View All Activities</a>
-                </div>
-                <div class="exp-grid">
-                    <div class="exp-item scroll-reveal">
-                        <div class="exp-icon">✦</div>
-                        <h4>Private Guides</h4>
-                        <p>Your own private guide and 4WD vehicle for the duration of your stay.</p>
-                    </div>
-                    <div class="exp-item scroll-reveal delay-1">
-                        <div class="exp-icon">☾</div>
-                        <h4>Stargazing</h4>
-                        <p>Discover the secrets of the southern sky with our expert astronomers.</p>
-                    </div>
-                    <div class="exp-item scroll-reveal delay-2">
-                        <div class="exp-icon">♨</div>
-                        <h4>Gastronomy</h4>
-                        <p>Local ingredients and world-class culinary techniques.</p>
-                    </div>
-                    <div class="exp-item scroll-reveal delay-3">
-                        <div class="exp-icon">↟</div>
-                        <h4>Exploration</h4>
-                        <p>Hiking, biking, or horseback riding through untouched landscapes.</p>
-                    </div>
-                </div>
-            </div>
+<!-- SUITES -->
+<section id="suites">
+    <h2>Suites &amp; Cabañas</h2>
+    <p>
+        Alojamientos privados que ofrecen una experiencia íntima y exclusiva.
+    </p>
+
+    <div class="grid">
+        <img src="https://picsum.photos/800/700?random=8" alt="Suite 1">
+        <img src="https://picsum.photos/800/700?random=9" alt="Suite 2">
+        <img src="https://picsum.photos/800/700?random=10" alt="Suite 3">
+    </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria">
+    <h2>Galería</h2>
+    <div class="grid">
+        <img src="https://picsum.photos/800/800?random=11" alt="Galería 1">
+        <img src="https://picsum.photos/800/800?random=12" alt="Galería 2">
+        <img src="https://picsum.photos/800/800?random=13" alt="Galería 3">
+        <img src="https://picsum.photos/800/800?random=14" alt="Galería 4">
+    </div>
+</section>
+
+<!-- RESERVA -->
+<section id="reserva" class="reserva">
+    <h2>Reserva tu estadía</h2>
+    <p>Texto genérico: Cuéntanos qué fechas te interesan y te contactaremos con una propuesta personalizada.</p>
+    <form class="reserva-form">
+        <div class="form-row">
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Correo electrónico" required>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section about-section">
-        <div class="container text-center narrow-container">
-            <span class="overline">Our Philosophy</span>
-            <h2 class="section-title scroll-reveal">The Soul of Nature</h2>
-            <p class="lead-text scroll-reveal">
-                At Refugio Alma, we believe that true luxury lies in privacy, silence, and a deep connection with
-                nature.
-                Our lodges are designed to blend seamlessly into their surroundings, offering a sanctuary where you can
-                disconnect
-                from the world and reconnect with yourself.
-            </p>
-            <div class="about-collage scroll-reveal">
-                <!-- Placeholder for collage -->
-                <div class="collage-img main"></div>
-                <div class="collage-img sub"></div>
-            </div>
+        <div class="form-row">
+            <input type="text" placeholder="Fecha de llegada">
+            <input type="text" placeholder="Fecha de salida">
         </div>
-    </section>
-
-    <!-- Journal Section -->
-    <section id="journal" class="section journal-section bg-light">
-        <div class="container">
-            <div class="section-header flex-header">
-                <h2 class="section-title">The Journal</h2>
-                <a href="#" class="link-arrow">Read all stories</a>
-            </div>
-            <div class="journal-grid">
-                <article class="journal-post scroll-reveal">
-                    <div class="post-img"></div>
-                    <div class="post-content">
-                        <span class="category">Gastronomy</span>
-                        <h4>Flavors of the Desert</h4>
-                        <a href="#" class="read-more">Read Story</a>
-                    </div>
-                </article>
-                <article class="journal-post scroll-reveal delay-1">
-                    <div class="post-img"></div>
-                    <div class="post-content">
-                        <span class="category">Wildlife</span>
-                        <h4>The Puma Tracking Experience</h4>
-                        <a href="#" class="read-more">Read Story</a>
-                    </div>
-                </article>
-                <article class="journal-post scroll-reveal delay-2">
-                    <div class="post-img"></div>
-                    <div class="post-content">
-                        <span class="category">Culture</span>
-                        <h4>Weaving Traditions</h4>
-                        <a href="#" class="read-more">Read Story</a>
-                    </div>
-                </article>
-            </div>
+        <div class="form-row">
+            <input type="number" min="1" placeholder="Cantidad de huéspedes">
+            <input type="text" placeholder="Código de país + teléfono">
         </div>
-    </section>
+        <textarea rows="4" placeholder="Cuéntanos qué tipo de experiencia buscas"></textarea>
+        <button type="submit" class="btn-hero btn-outline">Enviar solicitud</button>
+    </form>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <div class="contact-layout">
-                <div class="contact-info scroll-reveal">
-                    <h2 class="section-title">Plan Your Journey</h2>
-                    <p>Contact our reservations team to design your perfect stay.</p>
+<!-- CONTACTO -->
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>
+        Para consultas generales, alianzas o prensa, puedes escribirnos directamente usando el formulario o a un correo genérico.
+    </p>
 
-                    <div class="info-block">
-                        <h5>Reservations</h5>
-                        <a href="mailto:reservations@refugioalma.com">reservations@refugioalma.com</a>
-                        <a href="tel:+1234567890">+1 (234) 567-890</a>
-                    </div>
+    <form class="contact-form">
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo" required>
+        <textarea placeholder="Mensaje" rows="5" required></textarea>
+        <button type="submit" class="btn-hero btn-dark">
+            Enviar mensaje
+        </button>
+    </form>
+</section>
 
-                    <div class="social-block">
-                        <a href="#">Instagram</a>
-                        <a href="#">Facebook</a>
-                        <a href="#">Twitter</a>
-                    </div>
-                </div>
+<footer>
+    © 2025 Lodge Patagónico · Sitio demo inspirado en Awasi.com
+</footer>
 
-                <div class="contact-form-wrapper scroll-reveal delay-1">
-                    <form id="booking-form" class="booking-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" required>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="destination">Destination</label>
-                                <select id="destination">
-                                    <option value="atacama">Atacama</option>
-                                    <option value="patagonia">Patagonia</option>
-                                    <option value="iguazu">Iguazu</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="dates">Preferred Dates</label>
-                                <input type="date" id="dates">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" rows="4"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-dark full-width">Send Request</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">REFUGIO ALMA</div>
-                <div class="footer-links">
-                    <a href="#">Terms & Conditions</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Careers</a>
-                </div>
-                <div class="copyright">© 2025 Refugio Alma Collection. All rights reserved.</div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="scripts.js"></script>
+<script src="js/main.js"></script>
 </body>
-
 </html>
