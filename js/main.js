@@ -22,3 +22,22 @@ if (toggle && mobileMenu) {
         });
     });
 }
+
+// Hero Slideshow
+const heroSlideshow = document.getElementById("heroSlideshow");
+if (heroSlideshow) {
+    const images = heroSlideshow.querySelectorAll("img");
+    let currentIndex = 0;
+    const intervalTime = 5000; // 5 seconds
+
+    setInterval(() => {
+        // Remove active class from current image
+        images[currentIndex].classList.remove("active");
+
+        // Calculate next index
+        currentIndex = (currentIndex + 1) % images.length;
+
+        // Add active class to next image
+        images[currentIndex].classList.add("active");
+    }, intervalTime);
+}
