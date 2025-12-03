@@ -41,3 +41,22 @@ if (heroSlideshow) {
         images[currentIndex].classList.add("active");
     }, intervalTime);
 }
+
+// Section Scroll Animation
+const sections = document.querySelectorAll("section");
+const observerOptions = {
+    threshold: 0.15
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("section-visible");
+            observer.unobserve(entry.target); // Animate only once
+        }
+    });
+}, observerOptions);
+
+sections.forEach(section => {
+    observer.observe(section);
+});
