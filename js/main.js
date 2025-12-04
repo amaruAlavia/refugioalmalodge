@@ -57,6 +57,56 @@ const observer = new IntersectionObserver((entries, observer) => {
     });
 }, observerOptions);
 
+
 sections.forEach(section => {
     observer.observe(section);
 });
+
+// Audio Control
+const audio = document.getElementById("heroAudio");
+const audioBtn = document.getElementById("audioControl");
+const iconPlay = audioBtn ? audioBtn.querySelector(".icon-play") : null;
+const iconPause = audioBtn ? audioBtn.querySelector(".icon-pause") : null;
+
+if (audio && audioBtn && iconPlay && iconPause) {
+    // Set default volume to 40%
+    audio.volume = 0.4;
+
+    // Function to update icons based on state
+    const updateIcons = () => {
+        if (audio.paused) {
+            iconPlay.style.display = "block";
+            iconPause.style.display = "none";
+        } else {
+            iconPlay.style.display = "none";
+            iconPause.style.display = "block";
+        }
+    };
+
+    // Try to play on load (handling autoplay restrictions)
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+        playPromise.then(_ => {
+            // Autoplay started!
+            updateIcons();
+        }).catch(error => {
+            // Autoplay was prevented.
+            // Show play button so user can start playback.
+            console.log("Autoplay prevented:", error);
+            updateIcons();
+        });
+    }
+
+    audioBtn.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play().then(() => {
+                updateIcons();
+            }).catch(error => {
+                console.error("Audio play failed:", error);
+            });
+        } else {
+            audio.pause();
+            updateIcons();
+        }
+    });
+}
