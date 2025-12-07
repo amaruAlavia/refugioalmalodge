@@ -43,7 +43,7 @@ if (heroSlideshow) {
 }
 
 // Section Scroll Animation
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll("section:not(#nosotros)");
 const observerOptions = {
     threshold: 0.15
 };
@@ -61,6 +61,21 @@ const observer = new IntersectionObserver((entries, observer) => {
 sections.forEach(section => {
     observer.observe(section);
 });
+
+// ScrollReveal for Nosotros section
+const sr = ScrollReveal({
+    origin: 'bottom',
+    distance: '60px',
+    duration: 1000,
+    delay: 200,
+    reset: false
+});
+
+if (document.getElementById('nosotros')) {
+    sr.reveal('#nosotros h2', { origin: 'top' });
+    sr.reveal('#nosotros > p', { delay: 300, origin: 'bottom' });
+    sr.reveal('#nosotros .card', { interval: 200, delay: 500, origin: 'left' });
+}
 
 // Audio Control
 const audio = document.getElementById("heroAudio");
