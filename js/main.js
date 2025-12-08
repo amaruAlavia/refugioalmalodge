@@ -72,9 +72,38 @@ const sr = ScrollReveal({
 });
 
 if (document.getElementById('nosotros')) {
-    sr.reveal('#nosotros h2', { origin: 'top' });
-    sr.reveal('#nosotros > p', { delay: 300, origin: 'bottom' });
-    sr.reveal('#nosotros .card', { interval: 200, delay: 500, origin: 'left' });
+    sr.reveal('.about-image', {
+        origin: 'left',
+        distance: '120px',
+        duration: 1400,
+        opacity: 0,
+        scale: 0.85
+    });
+
+    sr.reveal('.about-content', {
+        origin: 'right',
+        distance: '60px',
+        duration: 1400,
+        delay: 400
+    });
+
+    sr.reveal('.about-highlight', {
+        origin: 'bottom',
+        delay: 800,
+        scale: 0.9,
+        duration: 1500
+    });
+}
+
+// ScrollReveal for Tours
+if (document.querySelector('.tour-card')) {
+    sr.reveal('.tour-card', {
+        interval: 200,
+        origin: 'bottom',
+        distance: '50px',
+        duration: 1200,
+        viewFactor: 0.2
+    });
 }
 
 // Audio Control
