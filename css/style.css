@@ -830,3 +830,263 @@ footer {
         max-width: 450px;
     }
 }
+
+/* ---------- REFUGIOS PAGE ---------- */
+
+.hero-internal {
+    height: 60vh;
+    background-image: url('../assets/hero4.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.unit-section {
+    padding: 80px 10%;
+    background: #fff;
+}
+
+.unit-section.alt-bg {
+    background: #fafafa;
+}
+
+.unit-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.unit-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.unit-content {
+    flex: 1;
+}
+
+.unit-gallery {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 4/3;
+}
+
+.unit-subtitle {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #c5a065;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.unit-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 42px;
+    margin-bottom: 10px;
+    color: #222;
+    text-transform: none;
+}
+
+.unit-price {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.unit-price span {
+    font-size: 14px;
+    color: #777;
+}
+
+.unit-description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.unit-features {
+    list-style: none;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.unit-features li {
+    font-size: 14px;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.unit-features li::before {
+    content: "•";
+    color: #c5a065;
+    font-size: 20px;
+}
+
+.unit-note {
+    font-size: 13px;
+    color: #888;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.carousel-track img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #333;
+    transition: all 0.3s ease;
+    opacity: 0;
+    /* Hidden by default, shown on hover */
+}
+
+.unit-gallery:hover .carousel-btn {
+    opacity: 1;
+}
+
+.carousel-btn:hover {
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-btn.prev {
+    left: 20px;
+}
+
+.carousel-btn.next {
+    right: 20px;
+}
+
+/* Responsive Refugios */
+@media (max-width: 900px) {
+
+    .unit-container,
+    .unit-container.reverse {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .unit-gallery {
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+}
+
+/* Refugios Carousel (Index) */
+.refugios-section {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    /* Remove default padding */
+}
+
+.refugios-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.refugios-carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.refugios-carousel img.active {
+    opacity: 1;
+}
+
+.refugios-overlay-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    border-radius: 4px;
+    max-width: 600px;
+}
+
+.refugios-overlay-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.refugios-overlay-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #f0f0f0;
+}

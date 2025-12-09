@@ -154,3 +154,22 @@ if (audio && audioBtn && iconPlay && iconPause) {
         }
     });
 }
+
+// Refugios Carousel (Index) - Auto Rotation
+const refugiosCarousel = document.getElementById('refugiosCarousel');
+if (refugiosCarousel) {
+    const images = refugiosCarousel.querySelectorAll('img');
+    let currentIndex = 0;
+    const intervalTime = 2000; // 2 seconds
+
+    setInterval(() => {
+        // Remove active class from current image
+        images[currentIndex].classList.remove('active');
+
+        // Calculate next index
+        currentIndex = (currentIndex + 1) % images.length;
+
+        // Add active class to next image
+        images[currentIndex].classList.add('active');
+    }, intervalTime);
+}
