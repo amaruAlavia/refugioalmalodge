@@ -1090,3 +1090,64 @@ footer {
     margin-bottom: 30px;
     color: #f0f0f0;
 }
+
+/* Location Section */
+.location-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.location-content {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.location-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.location-content h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.location-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.location-map {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.location-map iframe {
+    display: block;
+    width: 100%;
+    height: 450px;
+}
+
+@media (max-width: 768px) {
+    .location-container {
+        flex-direction: column;
+    }
+
+    .location-content {
+        text-align: center;
+    }
+}
