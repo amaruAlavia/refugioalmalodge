@@ -173,3 +173,47 @@ if (refugiosCarousel) {
         images[currentIndex].classList.add('active');
     }, intervalTime);
 }
+
+// Internal Carousels (Refugios Page)
+const internalCarousels = document.querySelectorAll('.carousel');
+
+internalCarousels.forEach(carousel => {
+    // Only run if this carousel has a track (to avoid errors if structure differs)
+    const track = carousel.querySelector('.carousel-track');
+    if (!track) return;
+
+    const images = track.querySelectorAll('img');
+    const prevBtn = carousel.querySelector('.prev');
+    const nextBtn = carousel.querySelector('.next');
+
+    if (!images.length) return;
+
+    function scrollToImage(index) {
+        const imageWidth = track.clientWidth; // Use track width for reliability
+        track.scrollTo({
+            left: index * imageWidth,
+            behavior: 'smooth'
+        });
+    }
+
+    // Button Listeners
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            const imageWidth = track.clientWidth;
+            const currentScroll = track.scrollLeft;
+            const currentIndex = Math.round(currentScroll / imageWidth);
+            const newIndex = Math.max(0, currentIndex - 1);
+            scrollToImage(newIndex);
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            const imageWidth = track.clientWidth;
+            const currentScroll = track.scrollLeft;
+            const currentIndex = Math.round(currentScroll / imageWidth);
+            const newIndex = Math.min(images.length - 1, currentIndex + 1);
+            scrollToImage(newIndex);
+        });
+    }
+});
